@@ -17,4 +17,12 @@ public class Point{
   public double distanceTo(Point other){
     return Math.sqrt(Math.pow(getX() - other.getX(), 2) + Math.pow(getY() - other.getY(), 2));
   }
+  public boolean equals(Point other){
+    if(getX() == other.getX() && getY() == other.getY()){
+        return true;
+    }
+    else{
+      return false;
+    }
+  }
 }

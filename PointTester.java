@@ -5,5 +5,6 @@ public class PointTester{
     System.out.println(pain.getX());
     System.out.println(pain.getY());
     System.out.println(pain.distanceTo(pain2));
+    System.out.println(pain.equals(pain2));
   }
 }
