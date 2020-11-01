@@ -6,8 +6,11 @@ public class Triangles{
     v3 = c;
   }
   public Triangles(double x1, double y1,double x2, double y2,double x3, double y3){
-    Point a = new Point(x1, y1);
-    Point b = new Point(x2, y2);
-    Point c = new Point(x3, y3);
+    Point v1 = new Point(x1, y1);
+    Point v2 = new Point(x2, y2);
+    Point v3 = new Point(x3, y3);
+  }
+  public double getPerimeter(){
+    return v1.distanceTo(v2) + v2.distanceTo(v3) + v3.distanceTo(v1);
   }
 }
