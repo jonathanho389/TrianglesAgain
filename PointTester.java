@@ -12,5 +12,7 @@ public class PointTester{
     System.out.println(pain4.getArea());
     System.out.println(pain4.classify());
     System.out.println(pain4.toString());
+    pain4.setVertex(0, pain2);
+    System.out.println(pain4.toString());
   }
 }
