@@ -13,4 +13,25 @@ public class Triangles{
   public double getPerimeter(){
     return v1.distanceTo(v2) + v2.distanceTo(v3) + v3.distanceTo(v1);
   }
-}
+  public double getArea(){
+    double semi = (getPerimeter())/2;
+    return Math.sqrt(semi * (semi - v1.distanceTo(v2)) * (semi - v2.distanceTo(v3)) * (semi - v3.distanceTo(v1)));
+  }
+  public String classify(){
+    double length1 = Math.round(v1.distanceTo(v2) * 10000.0)/10000.0;
+    double length2 = Math.round(v2.distanceTo(v3) * 10000.0)/10000.0;
+    double length3 = Math.round(v3.distanceTo(v1) * 10000.0)/10000.0;
+    if (length1 == length2 && length2 == length3 && length3 == length1){
+      return "equilateral";
+    }
+    else if(length1 == length2 || length2 == length3){
+      return "isosceles";
+    }
+    return "scalene";
+  }
+  /*public String toString(){
+    return "v1(" + v1 + ") " + "v2(" + v2 + ") " + "v3(" + v3 + ") ";
+  }
+  public void setVertex(int index, Point newP){
+    */
+  }

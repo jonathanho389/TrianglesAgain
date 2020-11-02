@@ -9,5 +9,8 @@ public class PointTester{
     System.out.println(pain.distanceTo(pain2));
     System.out.println(pain.equals(pain2));
     System.out.println(pain4.getPerimeter());
+    System.out.println(pain4.getArea());
+    System.out.println(pain4.classify());
+    System.out.println(pain4.toString());
   }
 }
